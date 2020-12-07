@@ -41,16 +41,27 @@ public WebElement goToSandingMail;
 public WebElement checkLastSandingMail;
 
  public void createPage() {
- new WebDriverWait(driver, 60)
-     .until(ExpectedConditions.elementToBeClickable(createPage));
- createPage.click();
+// new WebDriverWait(driver, 60)
+//     .until(ExpectedConditions.elementToBeClickable(createPage));
+  try {
+   Thread.sleep(100);
+  } catch (InterruptedException e) {
+   e.printStackTrace();
+  }
+  createPage.click();
 }
 public void checkDraftFolder(){
  checkDraftFolder.click();
 }
 public void checkLastDraft(){
- new WebDriverWait(driver, 60)
-         .until(ExpectedConditions.elementToBeClickable(checkLastDraft));
+// new WebDriverWait(driver, 60)
+//         .until(ExpectedConditions.elementToBeClickable(checkLastDraft));
+// checkLastDraft.click();
+ try {
+  Thread.sleep(100);
+ } catch (InterruptedException e) {
+  e.printStackTrace();
+ }
  checkLastDraft.click();
 }
 public void closeDraftWindow() {
@@ -70,8 +81,13 @@ public void goToSandingMail(){
  goToSandingMail.click();
 }
 public void checkLastSandingMail(){
- new WebDriverWait(driver, 60)
-         .until(ExpectedConditions.elementToBeClickable(checkLastSandingMail));
+// new WebDriverWait(driver, 60)
+//         .until(ExpectedConditions.elementToBeClickable(checkLastSandingMail));
+ try {
+  Thread.sleep(200);
+ } catch (InterruptedException e) {
+  e.printStackTrace();
+ }
  checkLastSandingMail.click();
 }
 public void assertMethodTest1(){

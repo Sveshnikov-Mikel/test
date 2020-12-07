@@ -11,7 +11,7 @@ public class TestBase{
 public void setUp() {
 System.setProperty("webdriver.chrome.driver", "C:\\Users\\msveshnikov\\Downloads\\addressbook-web-tests\\test\\src\\main\\resources\\chromedriver.exe");
 driver = new ChromeDriver();
-driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 driver.manage().window().maximize();
 driver.get("https://mail.ru/");}
 

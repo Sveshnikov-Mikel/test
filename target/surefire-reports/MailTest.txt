@@ -1,4 +1,17 @@
 -------------------------------------------------------------------------------
 Test set: MailTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.374 s - in MailTest
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 21.015 s <<< FAILURE! - in MailTest
+testMail(MailTest)  Time elapsed: 20.788 s  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(div,'Кому')][@data-name='to']//div[@data-type='to']/div/div/div/div"}
+  (Session info: chrome=87.0.4280.88)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'NB36-051', ip: '192.168.1.122', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\MSVESH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64216}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: c57bc8c7422245a2291456ad81239c8a
+*** Element info: {Using=xpath, value=//div[contains(div,'Кому')][@data-name='to']//div[@data-type='to']/div/div/div/div}
+	at MailTest.testMail(MailTest.java:35)
+
