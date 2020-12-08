@@ -1,4 +1,4 @@
-package ru.mail.test;
+package page;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -19,15 +19,15 @@ this.driver = driver;
 }
 
 
-@FindBy(xpath = "//div[@id='mailbox:loginContainer']")
+@FindBy(xpath = "//input[@name='login']")
 public WebElement clickLogin;
 
- @FindBy(xpath = "//input[@id='mailbox:login-input']") public WebElement inputlogin;
+ @FindBy(xpath = "//input[@name='login']") public WebElement inputlogin;
 
- @FindBy(xpath = "//input[@id='mailbox:password-input']")
+ @FindBy(xpath = "//input[@name='password']")
 public WebElement passwd;
 
- @FindBy(xpath = "//button [@id='mailbox:submit-button']")
+ @FindBy(xpath = "//button[contains(text(), 'Войти')]")
 public WebElement loginBtn;
 
  public void clickLogin() {
