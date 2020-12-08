@@ -9,15 +9,15 @@ import page.LoginPage;
 import page.MailPage;
 import page.NewMailPage;
 
-public class BasicPageDef extends TestBase{
+public class BasicPageDef extends TestBase {
 
- public static LoginPage loginPage;
- public static DataClass dataClass;
- public static MailPage mailPage;
- public static NewMailPage newMailPage;
+  public static LoginPage loginPage;
+  public static DataClass dataClass;
+  public static MailPage mailPage;
+  public static NewMailPage newMailPage;
 
   @Before
-  public void initialization(){
+  public void initialization() {
     setUp();
     loginPage = new LoginPage(driver);
     dataClass = new DataClass();
@@ -46,7 +46,6 @@ public class BasicPageDef extends TestBase{
 
 
   }
-
 
 
   @Тогда("нажимаем на поле Создать письмо")
@@ -101,8 +100,9 @@ public class BasicPageDef extends TestBase{
   public void выполняемПроверкуПоПолямАдресатаТемыПисьмаИТектсаЗакрваемОкноОтправленногоПисьма() {
     mailPage.assertMethodTest2();
   }
+
   @After
-  public void teardown(){
+  public void teardown() {
     tearDown();
   }
 }

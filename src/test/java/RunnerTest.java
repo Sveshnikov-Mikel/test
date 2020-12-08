@@ -6,8 +6,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
     features = "src/test/resources/features",
 
-    glue = {"src/main/java/ru/mail/test", "src/test/java"},
+    glue = "src/test/java",
     tags = "@all"
 )
-public class RunnerTest{
+public class RunnerTest {
 }

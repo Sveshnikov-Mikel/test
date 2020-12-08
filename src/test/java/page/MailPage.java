@@ -3,6 +3,7 @@ package page;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,10 +15,11 @@ public class MailPage {
   private static final Logger log = Logger.getLogger(String.valueOf(MailPage.class));
   public static DataClass dataClass;
   WebDriver driver;
+
   public MailPage(WebDriver driver) {
-    PageFactory.initElements(driver,this);
+    PageFactory.initElements(driver, this);
     this.driver = driver;
-    }
+  }
 
 
   @FindBy(xpath = "//a[@title='Написать письмо']")
@@ -62,9 +64,12 @@ public class MailPage {
   }
 
   public void logOut() {
-    logOut.click();
-    if (logOut == null) {
-      driver.findElement(By.xpath("//div[@class='ph-auth svelte-dphxt3']")).click();
+    try {
+      if (logOut.isEnabled()) {
+        logOut.click();
+      }
+    } catch (NoSuchElementException noSuchElementException) {
+      driver.findElement(By.xpath("//div[@class='ph-auth svelte-dphxt3']/div")).click();
       driver.findElement(By.xpath("//div[@class='ph-item ph-item__hover-active svelte-jet8df']")).click();
     }
 
